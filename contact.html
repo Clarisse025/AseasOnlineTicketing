@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aseas Online Ticketing/contact</title>
+</head>
+<body>
+    <nav>
+        <img src="img/logo.png" alt="Aseas Logo" class="logo">
+        <div class="menu ">
+            <div class="dropdown">
+                <a href="about.html">
+                    <button class="dropbtn mg">About</button>
+                </a>
+                <div class="dropdown-content">
+                  <a class="hover-underline-animation" href="mission.html">Our Mission</a>
+                  <a class="hover-underline-animation" href="offer.html">What We Offer</a>
+                  <a class="hover-underline-animation" href="choose.html">Why Choose Us</a>
+                </div>
+              </div>
+              <a  href="bookticket.html">Book Tickets</a>
+              <div class="dropdown">
+                    <button class="dropbtn add">Service</button>
+                <div class="dropdown-content add-margin ">
+                    <a class="hover-underline-animation" href="schedule.html">Schedule</a>
+                    <a class="hover-underline-animation" href="fare.html">Fare</a>
+                    <a class="hover-underline-animation" href="payment.html">Payment</a>
+                    
+                </div>
+              </div>
+            
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="login.html" class="login">Login</a> 
+    </nav>
+    <div class="contact-form-container">
+        <h2>Contact Us</h2>
+        <form action="submit_contact_form.php" method="post">
+            <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder="Name">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Email">
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" rows="4" required placeholder="Message"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

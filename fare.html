@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aseas Online Ticketing/Fare</title>
+</head>
+<body>
+    <nav>
+        <img src="img/logo.png" alt="Aseas Logo" class="logo">
+        <div class="menu ">
+            <div class="dropdown">
+                <a href="about.html">
+                    <button class="dropbtn mg">About</button>
+                </a>
+                <div class="dropdown-content">
+                  <a class="hover-underline-animation" href="mission.html">Our Mission</a>
+                  <a class="hover-underline-animation" href="offer.html">What We Offer</a>
+                  <a class="hover-underline-animation" href="choose.html">Why Choose Us</a>
+                </div>
+              </div>
+              <a  href="bookticket.html">Book Tickets</a>
+              <div class="dropdown">
+                    <button class="dropbtn add">Service</button>
+                <div class="dropdown-content add-margin ">
+                    <a class="hover-underline-animation" href="schedule.html">Schedule</a>
+                    <a class="hover-underline-animation" href="fare.html">Fare</a>
+                    <a class="hover-underline-animation" href="payment.html">Payment</a>
+                    
+                </div>
+              </div>
+            
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="login.html" class="login">Login</a> 
+    </nav>
+    <div class="fare-container">
+        <h2>Fare</h2>
+        <form id="fare-form">
+            <div class="fare-group">
+                <label for="passenger-fare">Passenger Fare:</label>
+                <select id="passenger-fare" name="passenger-fare" required>
+                    <option value="" disabled selected>Select fare type</option>
+                    <option value="470">Regular - Php 470</option>
+                    <option value="400">Student - Php 400</option>
+                    <option value="345">Senior - Php 345</option>
+                    <option value="235">Half(7-10 yrs.old) - Php 235</option>
+                </select>
+            </div>
+            <div class="fare-group">
+                <label for="terminal-pair">Terminal Fare:</label>
+                <select id="terminal-pair" name="terminal-pair" required>
+                    <option value="" disabled selected>Select terminal fee</option>
+                    <option value="22">Passenger (Per Person) - Php 22</option>
+                    <option value="129">Vehicle(4 wheels)- Php 129</option>
+                    <option value="65">Vehicle(Motorcycle) - Php 65</option>
+                </select>
+            </div>
+            <div class="fare-group">
+                <input type="submit" value="Calculate Fare">
+            </div>
+        </form>
+        <div class="total-fare" id="total-fare"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

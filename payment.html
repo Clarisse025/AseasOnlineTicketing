@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aseas Online Ticketing/Payment</title>
+</head>
+<body>
+    <nav>
+        <img src="img/logo.png" alt="Aseas Logo" class="logo">
+        <div class="menu ">
+            <div class="dropdown">
+                <a href="about.html">
+                    <button class="dropbtn mg">About</button>
+                </a>
+                <div class="dropdown-content">
+                  <a class="hover-underline-animation" href="mission.html">Our Mission</a>
+                  <a class="hover-underline-animation" href="offer.html">What We Offer</a>
+                  <a class="hover-underline-animation" href="choose.html">Why Choose Us</a>
+                </div>
+              </div>
+              <a  href="bookticket.html">Book Tickets</a>
+              <div class="dropdown">
+                    <button class="dropbtn add">Service</button>
+                <div class="dropdown-content add-margin ">
+                    <a class="hover-underline-animation" href="schedule.html">Schedule</a>
+                    <a class="hover-underline-animation" href="fare.html">Fare</a>
+                    <a class="hover-underline-animation" href="payment.html">Payment</a>
+                    
+                </div>
+              </div>
+            
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="login.html" class="login">Login</a> 
+    </nav>
+    <div class="payment-container">
+        <h2>Payment</h2>
+        <form id="payment-form">
+            <div class="payment-group">
+                <select id="payment-method" name="payment-method" required>
+                    <option value="" disabled selected>Select payment method</option>
+                    <option value="gcash"> GCASH</option>
+                    <option value="landbank">LANDBANK</option>
+                    <option value="rcbc">RCBC</option>
+                    <option value="pnb">PNB</option>
+                    <option value="pbi">BPI</option>
+                    <option value="metrobank">METROBANK</option>
+                    <option value="bdo">BDO</option>
+                    <option value="securitybank">SECURITYBANK</option>
+                </select>
+            </div>
+            <div class="payment-group">
+                <button class="btn-submit" id="proceedBtn">Proceed to Payment</button>
+            </div>
+        </form>
+    </div>
+    <div id="gcashModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="gcashClose" class="close">&times;</span>
+            <div class="fare-container">
+                <h2>GCASH Payment</h2>
+                <form id="gcashForm">
+                    <div class="fare-group">
+                        <label for="gcashAccountNumber">GCASH Account Number:</label>
+                        <input type="text" id="gcashAccountNumber" name="gcashAccountNumber" placeholder="Enter GCASH Account Number" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="landbankAccountName">GCASH Account Name:</label>
+                        <input type="text" id="Accountname" name="Accountname" placeholder="Enter GCASH Account Name" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="landbankAmount">Amount:</label>
+                        <input type="text" id="Amount" name="Amount" placeholder="Enter GCASH Money to send" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="RecipientAccountNumber">GCASH Recipient Account Number:</label>
+                        <input type="text" id="RecipientAccountNumber" name="RecipientAccountNumber" placeholder="Enter GCASH Recipient Account Number" required>
+                    </div>
+
+                    <div class="fare-group">
+                        <input type="submit" value="Submit Payment">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for LANDBANK Payment -->
+    <div id="landbankModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="landbankClose" class="close">&times;</span>
+            <div class="fare-container">
+                <h2>LANDBANK Payment</h2>
+                <form id="landbankForm">
+                    <div class="fare-group">
+                        <label for="AccountNumber">LANDBANK Account Number:</label>
+                        <input type="text" id="landbankAccountNumber" name="landbankAccountNumber" placeholder="Enter LANDBANK Account Number" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="AccountName">LANDBANK Account Name:</label>
+                        <input type="text" id="Accountname" name="Accountname" placeholder="Enter LANDBANK Account Name" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="Amount">Amount:</label>
+                        <input type="text" id="Amount" name="Amount" placeholder="Enter LANDBANK Amount Money to send" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="RecipientAccountNumber">LANDBANK Recipient Account Number:</label>
+                        <input type="text" id="RecipientAccountNumber" name="RecipientAccountNumber" placeholder="Enter LANDBANK Recipient Account Number" required>
+                    </div>
+
+                    <div class="fare-group">
+                        <input type="submit" value="Submit Payment">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal for RCBC Payment -->
+     <div id="rcbcModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="rcbcClose" class="close">&times;</span>
+            <div class="fare-container">
+                <h2>RCBC Payment</h2>
+                <form id="rcbcForm">
+                    <div class="fare-group">
+                        <label for="AccountNumber">RCBC Account Number:</label>
+                        <input type="text" id="landbankAccountNumber" name="landbankAccountNumber" placeholder="Enter RCBC Account Number" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="AccountName">RCBC Account Name:</label>
+                        <input type="text" id="Accountname" name="Accountname" placeholder="Enter RCBC Account Name" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="Amount">Amount:</label>
+                        <input type="text" id="Amount" name="Amount" placeholder="Enter RCBC Amount Money to send" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="RecipientAccountNumber">RCBC Recipient Account Number:</label>
+                        <input type="text" id="RecipientAccountNumber" name="RecipientAccountNumber" placeholder="Enter RCBC Recipient Account Number" required>
+                    </div>
+
+                    <div class="fare-group">
+                        <input type="submit" value="Submit Payment">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for PNB Payment -->
+    <div id="pnbModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="pnbClose" class="close">&times;</span>
+            <div class="fare-container">
+                <h2>PNB Payment</h2>
+                <form id="pnbForm">
+                    <div class="fare-group">
+                        <label for="AccountNumber">PNB Account Number:</label>
+                        <input type="text" id="landbankAccountNumber" name="landbankAccountNumber" placeholder="Enter PNB Account Number" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="AccountName">PNB Account Name:</label>
+                        <input type="text" id="Accountname" name="Accountname" placeholder="Enter PNB Account Name" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="Amount">Amount:</label>
+                        <input type="text" id="Amount" name="Amount" placeholder="Enter PNB Amount Money to send" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="RecipientAccountNumber">PNB Recipient Account Number:</label>
+                        <input type="text" id="RecipientAccountNumber" name="RecipientAccountNumber" placeholder="Enter PNB Recipient Account Number" required>
+                    </div>
+
+                    <div class="fare-group">
+                        <input type="submit" value="Submit Payment">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal for PBI Payment -->
+     <div id="pbiModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="pbiClose" class="close">&times;</span>
+            <div class="fare-container">
+                <h2>PBI Payment</h2>
+                <form id="pbiForm">
+                    <div class="fare-group">
+                        <label for="AccountNumber">PBI Account Number:</label>
+                        <input type="text" id="AccountNumber" name="AccountNumber" placeholder="Enter PBI Account Number" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="AccountName">PBI Account Name:</label>
+                        <input type="text" id="Accountname" name="Accountname" placeholder="Enter PBI Account Name" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="Amount">Amount:</label>
+                        <input type="text" id="Amount" name="Amount" placeholder="Enter PBI Amount Money to send" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="RecipientAccountNumber">PBI Recipient Account Number:</label>
+                        <input type="text" id="RecipientAccountNumber" name="RecipientAccountNumber" placeholder="Enter PBI Recipient Account Number" required>
+                    </div>
+
+                    <div class="fare-group">
+                        <input type="submit" value="Submit Payment">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal for METROBANK Payment -->
+     <div id="metrobankModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="metrobankClose" class="close">&times;</span>
+            <div class="fare-container">
+                <h2>MetroBank Payment</h2>
+                <form id="metrobankForm">
+                    <div class="fare-group">
+                        <label for="AccountNumber">MetroBank Account Number:</label>
+                        <input type="text" id="AccountNumber" name="AccountNumber" placeholder="Enter MetroBank Account Number" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="AccountName">MetroBank Account Name:</label>
+                        <input type="text" id="Accountname" name="Accountname" placeholder="Enter MetroBank Account Name" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="Amount">Amount:</label>
+                        <input type="text" id="Amount" name="Amount" placeholder="Enter MetroBank Amount Money to send" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="RecipientAccountNumber">MetroBank Recipient Account Number:</label>
+                        <input type="text" id="RecipientAccountNumber" name="RecipientAccountNumber" placeholder="Enter MetroBank Recipient Account Number" required>
+                    </div>
+
+                    <div class="fare-group">
+                        <input type="submit" value="Submit Payment">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal for BDO Payment -->
+     <div id="bdoModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="bdoClose" class="close">&times;</span>
+            <div class="fare-container">
+                <h2>BDO Payment</h2>
+                <form id="bdoForm">
+                    <div class="fare-group">
+                        <label for="AccountNumber">BDO Account Number:</label>
+                        <input type="text" id="AccountNumber" name="AccountNumber" placeholder="Enter BDO Account Number" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="AccountName">BDO Account Name:</label>
+                        <input type="text" id="Accountname" name="Accountname" placeholder="Enter BDO Account Name" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="Amount">Amount:</label>
+                        <input type="text" id="Amount" name="Amount" placeholder="Enter BDO Amount Money to send" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="RecipientAccountNumber">BDO Recipient Account Number:</label>
+                        <input type="text" id="RecipientAccountNumber" name="RecipientAccountNumber" placeholder="Enter BDO Recipient Account Number" required>
+                    </div>
+
+                    <div class="fare-group">
+                        <input type="submit" value="Submit Payment">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+     <!-- Modal for SECURITYBANK Payment -->
+     <div id="securitybankModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="securitybankClose" class="close">&times;</span>
+            <div class="fare-container">
+                <h2>SecurityBank Payment</h2>
+                <form id="securitybankForm">
+                    <div class="fare-group">
+                        <label for="AccountNumber">SecurityBank Account Number:</label>
+                        <input type="text" id="AccountNumber" name="AccountNumber" placeholder="Enter SecurityBank Account Number" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="AccountName">SecurityBank Account Name:</label>
+                        <input type="text" id="Accountname" name="Accountname" placeholder="Enter SecurityBank Account Name" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="Amount">Amount:</label>
+                        <input type="text" id="Amount" name="Amount" placeholder="Enter SecurityBank Amount Money to send" required>
+                    </div>
+                    <div class="fare-group">
+                        <label for="RecipientAccountNumber">SecurityBank Recipient Account Number:</label>
+                        <input type="text" id="RecipientAccountNumber" name="RecipientAccountNumber" placeholder="Enter SecurityBank Recipient Account Number" required>
+                    </div>
+
+                    <div class="fare-group">
+                        <input type="submit" value="Submit Payment">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Your script for modal functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const gcashModal = document.getElementById("gcashModal");
+            const landbankModal = document.getElementById("landbankModal");
+            const rcbcModal = document.getElementById("rcbcModal");
+            const pnbModal = document.getElementById("pnbModal");
+            const pbiModal = document.getElementById("pbiModal");
+            const metrobankModal = document.getElementById("metrobankModal");
+            const bdoModal = document.getElementById("bdoModal");
+            const securitybankModal = document.getElementById("securitybankModal");
+            
+            const gcashClose = document.getElementById("gcashClose");
+            const landbankClose = document.getElementById("landbankClose");
+            const rcbcClose = document.getElementById("rcbcClose");
+            const pnbClose = document.getElementById("pnbClose");
+            const pbiClose = document.getElementById("pbiClose");
+            const metrobankClose = document.getElementById("metrobankClose");
+            const bdoClose = document.getElementById("bdoClose");
+            const securitybankClose = document.getElementById("securitybankClose");
+            const paymentForm = document.getElementById("payment-form");
+            const proceedBtn = document.getElementById("proceedBtn");
+
+            proceedBtn.addEventListener("click", function(event) {
+                event.preventDefault(); 
+                const paymentMethod = document.getElementById("payment-method").value;
+
+                gcashModal.style.display = "none";
+                landbankModal.style.display = "none";
+                rcbcModal.style.display="none";
+                pnbModal.style.display = "none";
+                pbiModal.style.display = "none";
+                metrobankModal.style.display = "none";
+                bdoModal.style.display = "none";
+                securitybankModal.style.display ="none";
+
+                if (paymentMethod === "gcash") {
+                    gcashModal.style.display = "block";
+                } else if (paymentMethod === "landbank") {
+                    landbankModal.style.display = "block";
+                }
+                else if (paymentMethod === "rcbc") {
+                    rcbcModal.style.display = "block";
+                }
+                else if (paymentMethod === "pnb") {
+                    pnbModal.style.display = "block";
+                }
+                else if (paymentMethod === "pbi") {
+                    pbiModal.style.display = "block";
+                }
+                else if (paymentMethod === "metrobank") {
+                    metrobankModal.style.display = "block";
+                }
+                else if (paymentMethod === "bdo") {
+                    bdoModal.style.display = "block";
+                }
+                else if (paymentMethod === "securitybank") {
+                    securitybankModal.style.display = "block";
+                }
+                
+            });
+
+            gcashClose.onclick = function() {
+                gcashModal.style.display = "none";
+            };
+
+            landbankClose.onclick = function() {
+                landbankModal.style.display = "none";
+            };
+            rcbcClose.onclick = function() {
+                rcbcModal.style.display = "none";
+            };
+            pnbClose.onclick = function() {
+                pnbModal.style.display = "none";
+            };
+            pbiClose.onclick = function() {
+                pbiModal.style.display = "none";
+            };
+            metrobankClose.onclick = function() {
+                metrobankModal.style.display = "none";
+            };
+            bdoClose.onclick = function() {
+                bdoModal.style.display = "none";
+            };
+            securitybankClose.onclick = function() {
+                securitybankModal.style.display = "none";
+            };
+
+            window.onclick = function(event) {
+                if (event.target === gcashModal || event.target === landbankModal || event.target === rcbcModal || event.target === pnbModal
+                    || event.target === pbiModal|| event.target === metrobankModal || event.target === bdoModal || event.target === securitybankModal
+                ) {
+                    gcashModal.style.display = "none";
+                    landbankModal.style.display = "none";
+                    rcbcModal.style.display = "none";
+                    pnbModal.style.display = "none";
+                    pbiModal.style.display = "none";
+                    metrobankModal.style.display = "none";
+                    bdoModal.style.display = "none";
+                    securitybankModal.style.display = "none";
+                }
+            };
+        });
+    </script>
+</body>
+</html>

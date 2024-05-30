@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aseas Online Ticketing/BookTicket</title>
+</head>
+<body>
+    <nav>
+        <img src="img/logo.png" alt="Aseas Logo" class="logo">
+        <div class="menu ">
+            <div class="dropdown">
+                <a href="about.html">
+                    <button class="dropbtn mg">About</button>
+                </a>
+                <div class="dropdown-content">
+                  <a class="hover-underline-animation" href="mission.html">Our Mission</a>
+                  <a class="hover-underline-animation" href="offer.html">What We Offer</a>
+                  <a class="hover-underline-animation" href="choose.html">Why Choose Us</a>
+                </div>
+              </div>
+              <a  href="bookticket.html">Book Tickets</a>
+              <div class="dropdown">
+                    <button class="dropbtn add">Service</button>
+                <div class="dropdown-content add-margin ">
+                    <a class="hover-underline-animation" href="schedule.html">Schedule</a>
+                    <a class="hover-underline-animation" href="fare.html">Fare</a>
+                    <a class="hover-underline-animation" href="payment.html">Payment</a>
+                    
+                </div>
+              </div>
+            
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="login.html" class="login">Login</a> 
+    </nav>
+    <div class="ticket-container">
+        <h2>Book Ticket</h2>
+        <form>
+            <div class="ticket-group">
+                <select id="origin" name="origin" required>
+                    <option value="" disabled selected>Select your origin</option>
+                    <option value="port1">Balanacan Port</option>
+                    <option value="port2">Talao-Talao Port</option>
+                </select>
+            </div>
+            <div class="ticket-group">
+                <select id="destination" name="destination" required>
+                    <option value="" disabled selected>Select your destination</option>
+                    <option value="port1">Balanacan Port</option>
+                    <option value="port2">Talao-Talao Port</option>
+                </select>
+            </div>
+            <div class="ticket-group">
+                <select id="departure-time" name="departure-time" required>
+                    <option value="" disabled selected>Select departure time</option>
+                    <option value="morning">Morning (6:00 AM)</option>
+                    <option value="morning">Morning (9:00 AM)</option>
+                    <option value="morning">Morning (11:00 AM)</option>
+                    <option value="afternoon">Afternoon (2:00 PM)</option>
+                    <option value="afternoon">Afternoon (4:00 PM)</option>
+                    <option value="afternoon">Afternoon (6:00 PM)</option>
+                    
+                </select>
+            </div>
+            <div class="ticket-group">
+                <label for="passenger">Number of Passenger:</label>
+                <input type="number" id="passenger" name="passenger" min="1" max="10" required>
+            </div>
+            <div class="ticket-group">
+                <input type="submit" value="Book Now">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
